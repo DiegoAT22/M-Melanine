@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l \"/c/Users/diego/OneDrive/Documentos/Uag/melamine2 2/melamine2/css\"/*.css)",
+      "Bash(for dir:*)",
+      "Bash(do)",
+      "Bash(echo \"=== $dir ===\")",
+      "Read(//c/Users/diego/OneDrive/Documentos/Uag/melamine2 2/melamine2/imagenes/Fotos_Madera/**)",
+      "Bash(done)",
+      "Bash(python -c \":*)",
+      "Bash(python \"C:/Users/diego/OneDrive/Documentos/Uag/melamine2 2/melamine2/fix_galeria.py\")",
+      "Bash(python \"C:/Users/diego/OneDrive/Documentos/Uag/melamine2 2/melamine2/fix_precios.py\")",
+      "Bash(python \"C:/Users/diego/OneDrive/Documentos/Uag/melamine2 2/melamine2/fix_contacto.py\")",
+      "Bash(python \"C:/Users/diego/OneDrive/Documentos/Uag/melamine2 2/melamine2/fix_galeria2.py\")",
+      "Bash(del \"C:/Users/diego/OneDrive/Documentos/Uag/melamine2 2/melamine2/fix_galeria.py\" \"C:/Users/diego/OneDrive/Documentos/Uag/melamine2 2/melamine2/fix_galeria2.py\" \"C:/Users/diego/OneDrive/Documentos/Uag/melamine2 2/melamine2/fix_precios.py\" \"C:/Users/diego/OneDrive/Documentos/Uag/melamine2 2/melamine2/fix_contacto.py\")",
+      "Bash(dir \"c:\\\\Users\\\\diego\\\\OneDrive\\\\Documentos\\\\Uag\\\\melamine2 2\\\\melamine2\\\\imagenes\\\\Fotos_Madera\")",
+      "Bash(python \"c:/Users/diego/OneDrive/Documentos/Uag/melamine2 2/melamine2/html/index.html\")",
+      "Bash(py --version)"
+    ]
+  }
+}

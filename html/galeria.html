@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Melamine – Galería de proyectos. Inspírate con cocinas, closets y espacios fabricados con nuestras melaminas.">
+    <title>Galería | Melamine</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">M</div>
+                <span class="nav-logo-text">MELAMINE</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="galeria.html" class="active">Galería</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+            <a href="contacto.html" class="btn btn-green nav-cta">Solicitar cotización</a>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-header-title">Galería</h1>
+            <p class="page-header-desc">Inspírate con proyectos reales fabricados con nuestras hojas de melamina.</p>
+        </div>
+    </header>
+
+    <!--  Hero gallery image  -->
+    <section class="section section-bg-white" style="padding-top:60px; padding-bottom:0;">
+        <div class="container">
+            <div class="gallery-wrapper animate-on-scroll">
+                <img src="../imagenes/Fotos_Madera/ENCINO%20DAKAR/ENCINO%20DAKAR%20R%20(2).png"
+                    alt="Proyecto de cocina con hojas de melamina">
+                <div class="gallery-caption">
+                    <h3>Cocina en Café Roble y Gris Cenizo</h3>
+                    <p>Proyecto residencial — Zona Metropolitana de Guadalajara</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  Project carousel  -->
+    <section class="section solutions-section">
+        <div class="container">
+            <div class="solutions-header animate-on-scroll">
+                <div>
+                    <h2 class="section-title">Proyectos <span class="highlight-green">destacados</span></h2>
+                    <p class="section-subtitle">Desliza para ver aplicaciones de nuestros colores en distintos espacios.
+                    </p>
+                </div>
+            </div>
+
+            <div class="solutions-slider-wrap animate-on-scroll" style="position:relative;">
+                <button class="slider-nav prev" id="galPrev">&#8249;</button>
+                <div class="solutions-track" id="galTrack">
+
+                    <!-- Proyecto ABEDUL -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="ABEDUL"
+                        data-img="../imagenes/Fotos_Madera/ABEDUL/ABEDUL%20R.png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Clásicos y Cálidos</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/ABEDUL/ABEDUL%20R.png" alt="Textura de madera ABEDUL"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>ABEDUL</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto ABEDUL CENIZO -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="ABEDUL CENIZO"
+                        data-img="../imagenes/Fotos_Madera/ABEDUL%20CENIZO/abedul%20cenizo%20r%20(1).png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Tonos Claros</span></div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/ABEDUL%20CENIZO/abedul%20cenizo%20r%20(1).png"
+                                alt="Textura de madera ABEDUL CENIZO"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>ABEDUL CENIZO</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto Almendra -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="Almendra"
+                        data-img="../imagenes/Fotos_Madera/Almendra/Almendra.png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Tonos Claros</span></div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/Almendra/Almendra.png" alt="Textura de madera Almendra"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>Almendra</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto ALUMINIO GLITER -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="ALUMINIO GLITER"
+                        data-img="../imagenes/Fotos_Madera/ALUMINIO%20GLITER/alumin%20gliter%20(1).png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Texturas Especiales</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/ALUMINIO%20GLITER/alumin%20gliter%20(1).png"
+                                alt="Textura de madera ALUMINIO GLITER"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>ALUMINIO GLITER</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto AMAPA -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="AMAPA"
+                        data-img="../imagenes/Fotos_Madera/AMAPA/AMAPA%20R.png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Clásicos y Cálidos</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/AMAPA/AMAPA%20R.png" alt="Textura de madera AMAPA"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>AMAPA</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto AMAYA -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="AMAYA"
+                        data-img="../imagenes/Fotos_Madera/AMAYA/amaya%20r.png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Tonos Claros</span></div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/AMAYA/amaya%20r.png" alt="Textura de madera AMAYA"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>AMAYA</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto BAMBÚ -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="BAMBÚ"
+                        data-img="../imagenes/Fotos_Madera/BAMB%C3%9A/bamb%C3%BA%20r.png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Texturas Especiales</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/BAMB%C3%9A/bamb%C3%BA%20r.png" alt="Textura de madera BAMBÚ"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>BAMBÚ</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto CAOBA -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="CAOBA"
+                        data-img="../imagenes/Fotos_Madera/CAOBA/caoba1.png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Clásicos y Cálidos</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/CAOBA/caoba1.png" alt="Textura de madera CAOBA"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>CAOBA</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto CAOBA RUG -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="CAOBA RUG"
+                        data-img="../imagenes/Fotos_Madera/CAOBA%20RUG/caoba%20rug1.png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Clásicos y Cálidos</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/CAOBA%20RUG/caoba%20rug1.png"
+                                alt="Textura de madera CAOBA RUG" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>CAOBA RUG</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto CAOBILLA -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="CAOBILLA"
+                        data-img="../imagenes/Fotos_Madera/CAOBILLA/caobilla.png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Clásicos y Cálidos</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/CAOBILLA/caobilla.png" alt="Textura de madera CAOBILLA"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>CAOBILLA</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto EBANO AVELLANA -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="EBANO AVELLANA"
+                        data-img="../imagenes/Fotos_Madera/EBANO%20AVELLANA/%C3%A9bano%20av%201.png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Tonos Oscuros</span></div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/EBANO%20AVELLANA/%C3%A9bano%20av%201.png"
+                                alt="Textura de madera EBANO AVELLANA"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>EBANO AVELLANA</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto EBANO MOKA -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="EBANO MOKA"
+                        data-img="../imagenes/Fotos_Madera/EBANO%20MOKA/ebano%20moka.png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Tonos Oscuros</span></div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/EBANO%20MOKA/ebano%20moka.png"
+                                alt="Textura de madera EBANO MOKA" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>EBANO MOKA</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto Encino Algodón -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="Encino Algodón"
+                        data-img="../imagenes/Fotos_Madera/Encino%20Algod%C3%B3n/encino%20algod%C3%B3n%20r%20(1).png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Encinos y Fresnos</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/Encino%20Algod%C3%B3n/encino%20algod%C3%B3n%20r%20(1).png"
+                                alt="Textura de madera Encino Algodón"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>Encino Algodón</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto ENCINO ALPISTE -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="ENCINO ALPISTE"
+                        data-img="../imagenes/Fotos_Madera/ENCINO%20ALPISTE/encino%20alpiste%20(1).png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Encinos y Fresnos</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/ENCINO%20ALPISTE/encino%20alpiste%20(1).png"
+                                alt="Textura de madera ENCINO ALPISTE"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>ENCINO ALPISTE</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto Encino Avel -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="Encino Avel"
+                        data-img="../imagenes/Fotos_Madera/Encino%20Avel/encino%20av%20r%20(1).png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Encinos y Fresnos</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/Encino%20Avel/encino%20av%20r%20(1).png"
+                                alt="Textura de madera Encino Avel" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>Encino Avel</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto ENCINO CENIZO -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="ENCINO CENIZO"
+                        data-img="../imagenes/Fotos_Madera/ENCINO%20CENIZO/ENCINO%20CENIZO%20R%20(1).png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Encinos y Fresnos</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/ENCINO%20CENIZO/ENCINO%20CENIZO%20R%20(1).png"
+                                alt="Textura de madera ENCINO CENIZO"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>ENCINO CENIZO</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto ENCINO DAKAR -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="ENCINO DAKAR"
+                        data-img="../imagenes/Fotos_Madera/ENCINO%20DAKAR/ENCINO%20DAKAR%20R%20(1).png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Encinos y Fresnos</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/ENCINO%20DAKAR/ENCINO%20DAKAR%20R%20(1).png"
+                                alt="Textura de madera ENCINO DAKAR" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>ENCINO DAKAR</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto EXPRESSO -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="EXPRESSO"
+                        data-img="../imagenes/Fotos_Madera/EXPRESSO/EXPRESSO%20B%20(1).png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Tonos Oscuros</span></div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/EXPRESSO/EXPRESSO%20B%20(1).png" alt="Textura de madera EXPRESSO"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>EXPRESSO</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto FRESNO -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="FRESNO"
+                        data-img="../imagenes/Fotos_Madera/FRESNO/FRESNO%20R%20(1).png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Encinos y Fresnos</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/FRESNO/FRESNO%20R%20(1).png" alt="Textura de madera FRESNO"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>FRESNO</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto Fresno Avena -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="Fresno Avena"
+                        data-img="../imagenes/Fotos_Madera/Fresno%20Avena/fresno%20avena%201.png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Encinos y Fresnos</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/Fresno%20Avena/fresno%20avena%201.png"
+                                alt="Textura de madera Fresno Avena" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>Fresno Avena</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto LINO SERRA -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="LINO SERRA"
+                        data-img="../imagenes/Fotos_Madera/LINO%20SERRA/LINO%20SERRA%202.png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Texturas Especiales</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/LINO%20SERRA/LINO%20SERRA%202.png"
+                                alt="Textura de madera LINO SERRA" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>LINO SERRA</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto LINO SUAVE -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="LINO SUAVE"
+                        data-img="../imagenes/Fotos_Madera/LINO%20SUAVE/muestra.png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Texturas Especiales</span>
+                        </div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/LINO%20SUAVE/muestra.png"
+                                alt="Textura de madera LINO SUAVE" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>LINO SUAVE</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto LOMBARDÍA -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="LOMBARDÍA"
+                        data-img="../imagenes/Fotos_Madera/LOMBARD%C3%8DA/LOMBARD%C3%8DA%20R%20(1).png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Tonos Oscuros</span></div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/LOMBARD%C3%8DA/LOMBARD%C3%8DA%20R%20(1).png"
+                                alt="Textura de madera LOMBARDÍA" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>LOMBARDÍA</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto Roble Avellana -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="Roble Avellana"
+                        data-img="../imagenes/Fotos_Madera/Roble%20Avellana/roble%20avellana%20r%20(1).png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Tonos Claros</span></div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/Roble%20Avellana/roble%20avellana%20r%20(1).png"
+                                alt="Textura de madera Roble Avellana"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>Roble Avellana</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                    <!-- Proyecto VIZCAYA -->
+                    <div class="solution-card" style="min-width:260px; cursor:pointer;" data-wood="VIZCAYA"
+                        data-img="../imagenes/Fotos_Madera/VIZCAYA/VIZCAYA%20R%20(1).png">
+                        <div class="solution-card-header"><span class="solution-brand-badge">Tonos Claros</span></div>
+                        <div class="solution-card-img">
+                            <img src="../imagenes/Fotos_Madera/VIZCAYA/VIZCAYA%20R%20(1).png" alt="Textura de madera VIZCAYA"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="solution-card-body">
+                            <strong>VIZCAYA</strong>
+                            <span>Catálogo Maderas</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-nav next" id="galNext">&#8250;</button>
+            </div>
+        </div>
+    </section>
+
+    <!--  Galería completa – Photo masonry grid  -->
+    <section class="section photo-grid-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll" style="text-align:center;">
+                <h2 class="section-title">Galería <span class="highlight-green">completa</span></h2>
+                <p class="section-subtitle" style="margin:12px auto 0;">Espacios reales fabricados con nuestras
+                    melaminas. Fotos próximamente.</p>
+            </div>
+            <div class="photo-masonry animate-on-scroll">
+
+                <!-- Slot 1 - tall + madera -->
+                <div class="photo-slot tall madera">
+                    <img src="../imagenes/Fotos_Madera/Encino%20Algod%C3%B3n/encino%20algod%C3%B3n%20r%20(3).png"
+                        alt="Cocina" style="width:100%;height:100%;object-fit:cover;display:block;">
+                    <div class="photo-slot-caption">Cocina en Café Roble</div>
+                </div>
+
+                <!-- Slot 2 -->
+                <div class="photo-slot gris">
+                    <img src="../imagenes/Fotos_Madera/ENCINO%20CENIZO/ENCINO%20CENIZO%20R%20(1).png" alt="Sala"
+                        style="width:100%;height:100%;object-fit:cover;display:block;">
+                    <div class="photo-slot-caption">Centro de entretenimiento Gris</div>
+                </div>
+
+                <!-- Slot 3 -->
+                <div class="photo-slot blanco">
+                    <img src="../imagenes/Fotos_Madera/Fresno%20Avena/fresno%20avena%202.png" alt="Cocina"
+                        style="width:100%;height:100%;object-fit:cover;display:block;">
+                    <div class="photo-slot-caption">Cocina Blanco Brilloso</div>
+                </div>
+
+                <!-- Slot 4 - wide -->
+                <div class="photo-slot wide madera">
+                    <img src="../imagenes/Fotos_Madera/Roble%20Avellana/roble%20avellana%20r%20(2).png" alt="Closet"
+                        style="width:100%;height:100%;object-fit:cover;display:block;">
+                    <div class="photo-slot-caption">Vestidor en Café Roble</div>
+                </div>
+
+                <!-- Slot 5 -->
+                <div class="photo-slot blanco">
+                    <img src="../imagenes/Fotos_Madera/ENCINO%20ALPISTE/encino%20alpiste%20(2).png" alt="Oficina"
+                        style="width:100%;height:100%;object-fit:cover;display:block;">
+                    <div class="photo-slot-caption">Escritorio oficina corporativa</div>
+                </div>
+
+                <!-- Slot 6 - tall + gris -->
+                <div class="photo-slot tall gris">
+                    <img src="../imagenes/Fotos_Madera/LOMBARD%C3%8DA/LOMBARD%C3%8DA%20R%20(1).png" alt="Recámara"
+                        style="width:100%;height:100%;object-fit:cover;display:block;">
+                    <div class="photo-slot-caption">Recámara Gris Cenizo</div>
+                </div>
+
+                <!-- Slot 7 -->
+                <div class="photo-slot madera">
+                    <img src="../imagenes/Fotos_Madera/ABEDUL/ABEDUL%20R.png" alt="Alacena"
+                        style="width:100%;height:100%;object-fit:cover;display:block;">
+                    <div class="photo-slot-caption">Alacena en Arena</div>
+                </div>
+
+                <!-- Slot 8 -->
+                <div class="photo-slot verde">
+                    <img src="../imagenes/Fotos_Madera/VIZCAYA/VIZCAYA%20R%20(1).png" alt="Local comercial"
+                        style="width:100%;height:100%;object-fit:cover;display:block;">
+                    <div class="photo-slot-caption">Mueble comercial</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--  Applications split – McCorry certifications style  -->
+    <section class="certs-section section">
+        <div class="certs-layout">
+            <div class="certs-image-col">
+                <img src="../imagenes/Fotos_Madera/CAOBA/caoba3.png" alt="Aplicación de melamina"
+                    style="width:100%; height:100%; object-fit:cover; display:block; min-height:550px;">
+            </div>
+            <div class="certs-content-col animate-on-scroll">
+                <h2 class="certs-title">Aplicaciones<br><span class="highlight-green">Destacadas</span></h2>
+                <div class="cert-block">
+                    <strong>Cocinas</strong>
+                    <span>Superficies resistentes a la humedad y al calor. Ideal para frentes de muebles y
+                        alacenas.</span>
+                </div>
+                <div class="cert-block">
+                    <strong>Closets y vestidores</strong>
+                    <span>Acabados elegantes y duraderos para organizar tu espacio con estilo.</span>
+                </div>
+                <div class="cert-block">
+                    <strong>Oficinas y negocios</strong>
+                    <span>Muebles corporativos y divisiones de alta resistencia con acabado profesional.</span>
+                </div>
+                <div class="cert-block">
+                    <strong>Recámaras y salas</strong>
+                    <span>Cabeceras, cómodas y centros de entretenimiento con acabados premium.</span>
+                </div>
+                <a href="catalogo.html" class="btn btn-green" style="margin-top:28px;">Ver catálogo de colores →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp float -->
+    <a href="https://api.whatsapp.com/send?phone=523335590139&text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n%20de%20melamina."
+        class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <div class="contact-bar">
+        <div class="contact-bar-inner">
+            <div class="contact-bar-item"><span></span><a href="tel:3335590139">+52 (333) 559-0139</a></div>
+            <div class="contact-bar-item"><span></span><a href="https://api.whatsapp.com/send?phone=523335590139"
+                    target="_blank">WhatsApp</a></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">M</div><span class="footer-logo-text">MELAMINE</span>
+                </div>
+                <p class="footer-hours">Lunes a Viernes 9 AM – 6 PM</p>
+                <nav class="footer-nav">
+                    <a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a><a
+                        href="precios.html">Precios</a><a href="galeria.html">Galería</a><a
+                        href="contacto.html">Contáctanos</a>
+                </nav>
+                <div class="footer-social"><a href="#"></a><a href="#"></a><a
+                        href="https://api.whatsapp.com/send?phone=523335590139" target="_blank"></a></div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 Melamine. Todos los derechos reservados.</div>
+        </div>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const s = navToggle.querySelectorAll('span');
+            navToggle.classList.toggle('open');
+            if (navToggle.classList.contains('open')) { s[0].style.transform = 'rotate(45deg) translate(5px,5px)'; s[1].style.opacity = '0'; s[2].style.transform = 'rotate(-45deg) translate(5px,-5px)'; }
+            else { s[0].style.transform = 'none'; s[1].style.opacity = '1'; s[2].style.transform = 'none'; }
+        });
+
+        // Gallery slider
+        const galTrack = document.getElementById('galTrack');
+        let galOffset = 0;
+        function getGalCardW() { const c = galTrack.querySelector('.solution-card'); return c ? c.offsetWidth + 24 : 340; }
+        function updateGal(dir) {
+            const maxOffset = -(galTrack.scrollWidth - galTrack.parentElement.offsetWidth);
+            galOffset = Math.max(maxOffset, Math.min(0, galOffset + dir * -getGalCardW()));
+            galTrack.style.transform = `translateX(${galOffset}px)`;
+            galTrack.style.transition = 'transform 0.5s ease';
+        }
+        document.getElementById('galPrev').addEventListener('click', () => updateGal(-1));
+        document.getElementById('galNext').addEventListener('click', () => updateGal(1));
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

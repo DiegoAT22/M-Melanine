@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(py -c \":*)",
+      "Bash(py -c \"import sys; sys.stdout.reconfigure\\(encoding=''utf-8''\\); print\\(bytes\\([0xF0, 0x9F, 0x93, 0x8D]\\).decode\\(''utf-8''\\), bytes\\([0xF0, 0x9F, 0x91, 0x8D]\\).decode\\(''utf-8''\\)\\)\")",
+      "Bash(py -:*)",
+      "Bash(python3:*)",
+      "Bash(py -3 -c \":*)"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+/* =========================================
+   SECTION COMMONS
+   ========================================= */
+.section {
+  padding: 90px 0;
+}
+
+.section-bg-cream {
+  background: var(--bg-cream);
+}
+
+.section-bg-white {
+  background: var(--bg-white);
+}
+
+.section-bg-green {
+  background: var(--green-dark);
+}
+
+.section-header {
+  margin-bottom: 56px;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 580px;
+  margin-top: 12px;
+  font-weight: 300;
+}
+

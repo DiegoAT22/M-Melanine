@@ -1,0 +1,1622 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Melamine – Hojas de melamina de alta calidad en diversos colores. Precios mayoreo, medio mayoreo y menudeo. Envío incluido en zona metropolitana.">
+  <meta name="keywords"
+    content="melamina, hojas de melamina, mayoreo, medio mayoreo, menudeo, gris cenizo, arena, café roble, blanco frosty">
+  <title>Melamine | Hojas de Melamina Premium</title>
+  <style>
+    /* ============================================
+   MELAMINE – Premium Informational Website
+   ============================================ */
+
+    /* --- Google Fonts --- */
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+    /* --- CSS Custom Properties --- */
+    :root {
+      /* Brand Colors */
+      --bg-primary: #0f0f0f;
+      --bg-secondary: #1a1714;
+      --bg-card: rgba(255, 255, 255, 0.04);
+      --bg-card-hover: rgba(255, 255, 255, 0.08);
+      --glass-bg: rgba(255, 255, 255, 0.06);
+      --glass-border: rgba(255, 255, 255, 0.1);
+
+      /* Text Colors */
+      --text-primary: #f5f0eb;
+      --text-secondary: #b8a99a;
+      --text-muted: #7a6e63;
+      --text-accent: #d4a853;
+
+      /* Warm Accent Palette */
+      --accent-gold: #d4a853;
+      --accent-gold-light: #e8c97a;
+      --accent-warm: #c4956a;
+      --accent-green: #6b9e6b;
+      --accent-yellow: #c9a842;
+      --accent-blue: #6b8eb0;
+
+      /* Gradients */
+      --gradient-hero: linear-gradient(135deg, rgba(15, 15, 15, 0.7) 0%, rgba(26, 23, 20, 0.85) 100%);
+      --gradient-gold: linear-gradient(135deg, #d4a853 0%, #c4956a 100%);
+      --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+
+      /* Spacing */
+      --section-padding: 100px 0;
+      --container-width: 1200px;
+
+      /* Typography */
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      /* Transitions */
+      --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --transition-bounce: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* --- Reset & Base --- */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* --- Keyframe Animations --- */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -200% center;
+      }
+
+      100% {
+        background-position: 200% center;
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes pulseGlow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 20px rgba(212, 168, 83, 0.1);
+      }
+
+      50% {
+        box-shadow: 0 0 40px rgba(212, 168, 83, 0.25);
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* --- Navigation --- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: var(--transition-smooth);
+      animation: slideDown 0.8s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(15, 15, 15, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--gradient-gold);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--bg-primary);
+    }
+
+    .nav-logo-text {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 3px;
+      color: var(--text-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 36px;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-secondary);
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gradient-gold);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Mobile menu toggle */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 5px;
+    }
+
+    .nav-toggle span {
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      transition: var(--transition-smooth);
+      border-radius: 2px;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.35) saturate(0.8);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+          rgba(15, 15, 15, 0.3) 0%,
+          rgba(15, 15, 15, 0.5) 50%,
+          rgba(15, 15, 15, 0.95) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      padding: 0 24px;
+      animation: fadeInUp 1s ease 0.3s both;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 28px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      animation: pulseGlow 2s ease infinite;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 800;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-gold-light) 50%, var(--text-primary) 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--text-secondary);
+      font-weight: 300;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gradient-gold);
+      color: var(--bg-primary);
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: var(--transition-smooth);
+      border: none;
+      cursor: pointer;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(212, 168, 83, 0.35);
+    }
+
+    .hero-cta svg {
+      width: 18px;
+      height: 18px;
+      transition: var(--transition-smooth);
+    }
+
+    .hero-cta:hover svg {
+      transform: translateY(3px);
+    }
+
+    .hero-scroll-indicator {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      animation: float 2.5s ease infinite;
+    }
+
+    .hero-scroll-indicator .line {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, var(--accent-gold), transparent);
+      margin: 0 auto;
+    }
+
+    .hero-scroll-indicator .text {
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+
+    /* --- Section Styling --- */
+    .section {
+      padding: var(--section-padding);
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .section-label::before,
+    .section-label::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 30px;
+      height: 1px;
+      background: var(--accent-gold);
+      opacity: 0.4;
+    }
+
+    .section-label::before {
+      right: calc(100% + 12px);
+    }
+
+    .section-label::after {
+      left: calc(100% + 12px);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    /* --- Colors Section --- */
+    .colors-section {
+      background: var(--bg-secondary);
+    }
+
+    .colors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .color-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 24px 16px;
+      text-align: center;
+      transition: var(--transition-smooth);
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .color-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-gold);
+      opacity: 0;
+      transition: var(--transition-smooth);
+    }
+
+    .color-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-6px);
+      border-color: rgba(212, 168, 83, 0.25);
+    }
+
+    .color-card:hover::before {
+      opacity: 1;
+    }
+
+    .color-swatch {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .color-card:hover .color-swatch {
+      transform: scale(1.1);
+      border-color: rgba(212, 168, 83, 0.4);
+    }
+
+    /* Individual color swatches */
+    .swatch-gris-cenizo {
+      background: linear-gradient(135deg, #9e9e9e, #b0b0b0);
+      box-shadow: 0 4px 15px rgba(158, 158, 158, 0.3);
+    }
+
+    .swatch-arena {
+      background: linear-gradient(135deg, #d4b896, #e0cbb0);
+      box-shadow: 0 4px 15px rgba(212, 184, 150, 0.3);
+    }
+
+    .swatch-cafe-roble {
+      background: linear-gradient(135deg, #8b6914, #a67c3c);
+      box-shadow: 0 4px 15px rgba(139, 105, 20, 0.3);
+    }
+
+    .swatch-blanco-frosty {
+      background: linear-gradient(135deg, #e8e8f0, #f0f0f8);
+      box-shadow: 0 4px 15px rgba(232, 232, 240, 0.2);
+    }
+
+    .swatch-blanco-mate {
+      background: linear-gradient(135deg, #e8e4df, #f2ede8);
+      box-shadow: 0 4px 15px rgba(232, 228, 223, 0.2);
+    }
+
+    .swatch-blanco-solido {
+      background: linear-gradient(135deg, #f5f5f5, #ffffff);
+      box-shadow: 0 4px 15px rgba(245, 245, 245, 0.2);
+    }
+
+    .swatch-blanco-brilloso {
+      background: linear-gradient(135deg, #ffffff, #fafafa);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .color-name {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      letter-spacing: 0.5px;
+      transition: var(--transition-smooth);
+    }
+
+    /* --- Interactive Color Preview --- */
+    .colors-section {
+      transition: background-color 0.6s ease;
+    }
+
+    .color-card {
+      cursor: pointer;
+    }
+
+    .color-card.color-active {
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 20px rgba(212, 168, 83, 0.3);
+      transform: translateY(-6px);
+    }
+
+    .color-card.color-active::before {
+      opacity: 1;
+    }
+
+    .color-card.color-active .color-swatch {
+      transform: scale(1.15);
+      border-color: var(--accent-gold);
+    }
+
+    /* When previewing a light color, swap text to dark */
+    .colors-section.light-preview .section-title,
+    .colors-section.light-preview .section-label,
+    .colors-section.light-preview .section-desc,
+    .colors-section.light-preview .color-name {
+      color: #1a1714;
+    }
+
+    .colors-section.light-preview .section-label::before,
+    .colors-section.light-preview .section-label::after {
+      background: #1a1714;
+    }
+
+    .colors-section.light-preview .color-card {
+      background: rgba(0, 0, 0, 0.06);
+      border-color: rgba(0, 0, 0, 0.12);
+    }
+
+    .colors-section.light-preview .color-card:hover,
+    .colors-section.light-preview .color-card.color-active {
+      background: rgba(0, 0, 0, 0.1);
+      border-color: rgba(139, 105, 20, 0.6);
+    }
+
+    /* --- Pricing Section --- */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 40px 32px;
+      text-align: center;
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .pricing-card:hover {
+      transform: scale(1.05);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Card accent colors */
+    .pricing-card.mayoreo::before {
+      background: linear-gradient(90deg, #4caf50, #66bb6a);
+    }
+
+    .pricing-card.mayoreo:hover {
+      box-shadow: 0 20px 60px rgba(76, 175, 80, 0.15);
+    }
+
+    .pricing-card.medio::before {
+      background: linear-gradient(90deg, #f9a825, #fdd835);
+    }
+
+    .pricing-card.medio:hover {
+      box-shadow: 0 20px 60px rgba(249, 168, 37, 0.15);
+    }
+
+    .pricing-card.menudeo::before {
+      background: linear-gradient(90deg, #42a5f5, #64b5f6);
+    }
+
+    .pricing-card.menudeo:hover {
+      box-shadow: 0 20px 60px rgba(66, 165, 245, 0.15);
+    }
+
+
+    .pricing-badge {
+      display: inline-block;
+      padding: 4px 16px;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .mayoreo .pricing-badge {
+      background: rgba(76, 175, 80, 0.15);
+      color: #66bb6a;
+      border: 1px solid rgba(76, 175, 80, 0.25);
+    }
+
+    .medio .pricing-badge {
+      background: rgba(249, 168, 37, 0.15);
+      color: #fdd835;
+      border: 1px solid rgba(249, 168, 37, 0.25);
+    }
+
+    .menudeo .pricing-badge {
+      background: rgba(66, 165, 245, 0.15);
+      color: #64b5f6;
+      border: 1px solid rgba(66, 165, 245, 0.25);
+    }
+
+    .pricing-icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .pricing-card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+
+    .pricing-amount {
+      margin-bottom: 28px;
+    }
+
+    .pricing-currency {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      vertical-align: top;
+      line-height: 1;
+    }
+
+    .pricing-value {
+      font-family: var(--font-heading);
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .pricing-unit {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      letter-spacing: 1px;
+    }
+
+    .pricing-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--glass-border);
+      margin: 0 auto 24px;
+      border-radius: 2px;
+    }
+
+    .pricing-features {
+      list-style: none;
+      text-align: left;
+    }
+
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-features li .icon {
+      flex-shrink: 0;
+      font-size: 1rem;
+      margin-top: 2px;
+    }
+
+    .popular-tag {
+      position: absolute;
+      top: 20px;
+      right: -30px;
+      background: var(--gradient-gold);
+      color: var(--bg-primary);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 40px;
+      transform: rotate(45deg);
+    }
+
+    /* --- Gallery Section --- */
+    .gallery-section {
+      background: var(--bg-secondary);
+    }
+
+    .gallery-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+    }
+
+    .gallery-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: var(--transition-smooth);
+    }
+
+    .gallery-wrapper:hover img {
+      transform: scale(1.03);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 40px 32px 28px;
+      background: linear-gradient(to top, rgba(15, 15, 15, 0.9), transparent);
+    }
+
+    .gallery-caption h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .gallery-caption p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* --- Features / Benefits Section --- */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: var(--transition-smooth);
+    }
+
+    .feature-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-4px);
+      border-color: rgba(212, 168, 83, 0.2);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* --- CTA Section --- */
+    .cta-section {
+      background: var(--bg-secondary);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212, 168, 83, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-content h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .cta-content p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 36px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: var(--transition-smooth);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--gradient-gold);
+      color: var(--bg-primary);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(212, 168, 83, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-primary);
+      border: 1px solid var(--glass-border);
+    }
+
+    .btn-outline:hover {
+      background: var(--glass-bg);
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+      transform: translateY(-3px);
+    }
+
+    /* --- Footer --- */
+    .footer {
+      padding: 60px 0 30px;
+      border-top: 1px solid var(--glass-border);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand {
+      max-width: 320px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .footer-logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--gradient-gold);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--bg-primary);
+    }
+
+    .footer-logo-text {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      color: var(--text-primary);
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .footer-links h4 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      transition: var(--transition-smooth);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+    }
+
+    /* --- Responsive Design --- */
+    @media screen and (max-width: 968px) {
+
+      .pricing-grid,
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .pricing-card.featured {
+        transform: scale(1);
+      }
+
+      .pricing-card.featured:hover {
+        transform: translateY(-8px);
+      }
+
+      .footer-content {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      :root {
+        --section-padding: 70px 0;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(15, 15, 15, 0.97);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 20px 24px;
+        gap: 16px;
+        border-bottom: 1px solid var(--glass-border);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero h1 {
+        letter-spacing: 4px;
+      }
+
+      .colors-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 14px;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-brand {
+        max-width: 100%;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .popular-tag {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .hero-badge {
+        font-size: 0.7rem;
+        padding: 6px 14px;
+      }
+
+      .colors-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .color-swatch {
+        width: 50px;
+        height: 50px;
+      }
+
+      .section-label::before,
+      .section-label::after {
+        display: none;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/sections.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em'
+      font-size='90'>🪵</text></svg>">
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">M</div>
+        <span class="nav-logo-text">MELAMINE</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#colores">Colores</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <img src="../imagenes/melamineimg1.jpeg" alt="Muestras de hojas de melamina en diferentes colores y acabados">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+
+      <h1>Melamine</h1>
+      <p class="hero-subtitle">Hojas de melamina de alta calidad</p>
+      <a href="#precios" class="hero-cta">
+        Ver Precios
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+        </svg>
+      </a>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="line"></div>
+      <div class="text">Scroll</div>
+    </div>
+  </section>
+
+  <!-- ========== COLORES ========== -->
+  <section class="section colors-section" id="colores">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Catálogo</span>
+        <h2 class="section-title">Nuestros Colores</h2>
+        <p class="section-desc">Disponemos de una amplia gama de colores y acabados para cada proyecto. Encuentra el
+          tono perfecto para tus espacios.</p>
+      </div>
+      <div class="colors-grid animate-on-scroll">
+        <div class="color-card" data-color="#9e9e9e">
+          <div class="color-swatch swatch-gris-cenizo"></div>
+          <span class="color-name">Gris Cenizo</span>
+        </div>
+        <div class="color-card" data-color="#d4b896">
+          <div class="color-swatch swatch-arena"></div>
+          <span class="color-name">Arena</span>
+        </div>
+        <div class="color-card" data-color="#8b6914">
+          <div class="color-swatch swatch-cafe-roble"></div>
+          <span class="color-name">Café Roble</span>
+        </div>
+        <div class="color-card" data-color="#e8e8f0">
+          <div class="color-swatch swatch-blanco-frosty"></div>
+          <span class="color-name">Blanco Frosty</span>
+        </div>
+        <div class="color-card" data-color="#e8e4df">
+          <div class="color-swatch swatch-blanco-mate"></div>
+          <span class="color-name">Blanco Mate</span>
+        </div>
+        <div class="color-card" data-color="#f5f5f5">
+          <div class="color-swatch swatch-blanco-solido"></div>
+          <span class="color-name">Blanco Sólido</span>
+        </div>
+        <div class="color-card" data-color="#ffffff">
+          <div class="color-swatch swatch-blanco-brilloso"></div>
+          <span class="color-name">Blanco Brilloso</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRECIOS ========== -->
+  <section class="section" id="precios">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Precios</span>
+        <h2 class="section-title">Elige tu Plan</h2>
+        <p class="section-desc">Ofrecemos precios competitivos para cada nivel de compra. Mientras más compras, más
+          ahorras.</p>
+      </div>
+      <div class="pricing-grid animate-on-scroll">
+
+        <!-- Mayoreo -->
+        <div class="pricing-card mayoreo">
+          <div class="pricing-icon">🟢</div>
+          <span class="pricing-badge">Mayoreo</span>
+          <h3>Mayoreo</h3>
+          <div class="pricing-amount">
+            <span class="pricing-currency">$</span>
+            <span class="pricing-value">350</span>
+            <span class="pricing-unit">por paquete</span>
+          </div>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li>
+              <span class="icon">📦</span>
+              <span>A partir de <strong>5 paquetes</strong> o más</span>
+            </li>
+            <li>
+              <span class="icon">📄</span>
+              <span>Cada paquete contiene <strong>300 hojas</strong></span>
+            </li>
+            <li>
+              <span class="icon">🚚</span>
+              <span><strong>Flete incluido</strong> en zona metropolitana</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Medio Mayoreo -->
+        <div class="pricing-card medio">
+          <div class="pricing-icon">🟡</div>
+          <span class="pricing-badge">Medio Mayoreo</span>
+          <h3>Medio Mayoreo</h3>
+          <div class="pricing-amount">
+            <span class="pricing-currency">$</span>
+            <span class="pricing-value">390</span>
+            <span class="pricing-unit">por paquete</span>
+          </div>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li>
+              <span class="icon">📦</span>
+              <span>Desde <strong>1 paquete</strong></span>
+            </li>
+            <li>
+              <span class="icon">📄</span>
+              <span>Paquetes de <strong>60 a 65 hojas</strong> (puede variar)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Menudeo -->
+        <div class="pricing-card menudeo">
+          <div class="pricing-icon">🔵</div>
+          <span class="pricing-badge">Menudeo</span>
+          <h3>Menudeo</h3>
+          <div class="pricing-amount">
+            <span class="pricing-currency">$</span>
+            <span class="pricing-value">500</span>
+            <span class="pricing-unit">por hoja</span>
+          </div>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li>
+              <span class="icon">📄</span>
+              <span>Desde <strong>1 hoja</strong></span>
+            </li>
+            <li>
+              <span class="icon">✅</span>
+              <span>Sin mínimo de compra</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALERíA ========== -->
+  <section class="section gallery-section" id="galeria">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Producto</span>
+        <h2 class="section-title">Nuestras Muestras</h2>
+        <p class="section-desc">Melamina de primera calidad con acabados resistentes y elegantes para todo tipo de
+          proyectos.</p>
+      </div>
+      <div class="gallery-wrapper animate-on-scroll">
+        <img src="../imagenes/melamineimg2.jpeg"
+          alt="Muestras de hojas de melamina mostrando diferentes texturas y tonos de madera y blancos">
+        <div class="gallery-caption">
+          <h3>Variedad de acabados y texturas</h3>
+          <p>Disponibles en tonos madera y blancos con diferentes acabados</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BENEFICIOS ========== -->
+  <section class="section" id="beneficios">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Ventajas</span>
+        <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+        <p class="section-desc">Calidad comprobada y precios justos que respaldan cada proyecto.</p>
+      </div>
+      <div class="features-grid animate-on-scroll">
+        <div class="feature-card">
+          <div class="feature-icon">ðŸ­</div>
+          <h3>Calidad Premium</h3>
+          <p>Hojas de melamina con acabados resistentes y duraderos para todo tipo de uso.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Precios Competitivos</h3>
+          <p>Los mejores precios del mercado en mayoreo, medio mayoreo y menudeo.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚚</div>
+          <h3>Envío Incluido</h3>
+          <p>Flete incluido en zona metropolitana para compras de mayoreo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA / CONTACTO ========== -->
+  <section class="section cta-section" id="contacto">
+    <div class="container">
+      <div class="cta-content animate-on-scroll">
+        <h2>¿Listo para tu pedido?</h2>
+        <p>Contáctanos y obtén la mejor melamina para tus proyectos al mejor precio.</p>
+        <div class="cta-buttons">
+          <a href="https://api.whatsapp.com/send?phone=523335590139&text=Hola%2C%20tengo%20la%20informaci%C3%B3n%20de%20WhatsApp%20de%20tu%20web."
+            class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            💬 WhatsApp
+          </a>
+          <a href="tel:" class="btn btn-outline">
+            📞 Llámanos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon">M</div>
+            <span class="footer-logo-text">MELAMINE</span>
+          </div>
+          <p>Hojas de melamina de alta calidad para todos tus proyectos. Variedad de colores y los mejores precios del
+            mercado.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#colores">Colores</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#galeria">Galería</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Colores</h4>
+          <ul>
+            <li><a href="#colores">Gris Cenizo</a></li>
+            <li><a href="#colores">Arena</a></li>
+            <li><a href="#colores">Café Roble</a></li>
+            <li><a href="#colores">Blancos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Melamine. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    // --- Navbar scroll effect ---
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // --- Mobile menu toggle ---
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      // Animate hamburger
+      const spans = navToggle.querySelectorAll('span');
+      navToggle.classList.toggle('open');
+      if (navToggle.classList.contains('open')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      } else {
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      }
+    });
+
+    // Close menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const spans = navToggle.querySelectorAll('span');
+        navToggle.classList.remove('open');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      });
+    });
+
+    // --- Scroll animations (Intersection Observer) ---
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // --- Color preview on click ---
+    const colorsSection = document.getElementById('colores');
+    const colorCards = document.querySelectorAll('.color-card[data-color]');
+
+    colorCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const color = card.dataset.color;
+        const isActive = card.classList.contains('color-active');
+
+        // Remove active state from all cards
+        colorCards.forEach(c => c.classList.remove('color-active'));
+
+        if (isActive) {
+          // Deselect: restore original dark background
+          colorsSection.style.backgroundColor = '';
+          colorsSection.classList.remove('light-preview');
+        } else {
+          // Select: preview this color as section background
+          card.classList.add('color-active');
+          colorsSection.style.backgroundColor = color;
+          // Swap text to dark for light colors
+          const r = parseInt(color.slice(1, 3), 16);
+          const g = parseInt(color.slice(3, 5), 16);
+          const b = parseInt(color.slice(5, 7), 16);
+          const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+          if (luminance > 0.55) {
+            colorsSection.classList.add('light-preview');
+          } else {
+            colorsSection.classList.remove('light-preview');
+          }
+        }
+      });
+    });
+
+    // --- Smooth scroll for anchor links ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

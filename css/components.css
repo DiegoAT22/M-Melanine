@@ -1,0 +1,151 @@
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: var(--radius-btn);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-green {
+  background: var(--green-dark);
+  color: #fff;
+}
+
+.btn-green:hover {
+  background: var(--green-mid);
+  transform: translateY(-2px);
+}
+
+.btn-outline-dark {
+  background: transparent;
+  border: 2px solid var(--green-dark);
+  color: var(--green-dark);
+}
+
+.btn-outline-dark:hover {
+  background: var(--green-dark);
+  color: #fff;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--text-dark);
+}
+
+.btn-gold:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.btn-white {
+  background: #fff;
+  color: var(--green-dark);
+}
+
+.btn-white:hover {
+  background: var(--bg-cream);
+  transform: translateY(-2px);
+}
+
+.btn-outline-white {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+}
+
+/* ── Scroll animation ── */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   IMAGE PLACEHOLDERS
+   ========================================= */
+.img-placeholder-block {
+  background: var(--bg-cream-mid);
+  border: 2px dashed rgba(201, 167, 78, 0.4);
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px;
+  min-height: 300px;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.img-placeholder-block:hover {
+  border-color: var(--gold);
+  color: var(--text-body);
+}
+
+.img-placeholder-block i {
+  font-size: 2.8rem;
+  margin-bottom: 14px;
+  opacity: 0.5;
+}
+
+.img-placeholder-block .ph-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+
+.img-placeholder-block .ph-desc {
+  font-size: 0.82rem;
+  max-width: 380px;
+}
+
+/* =========================================
+   WHATSAPP FLOAT BUTTON
+   ========================================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+  transition: var(--transition);
+}
+
+.whatsapp-float svg {
+  width: 30px;
+  height: 30px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 12px 32px rgba(37,211,102,0.55);
+}
+
