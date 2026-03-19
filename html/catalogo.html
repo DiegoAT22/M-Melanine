@@ -53,10 +53,10 @@
     /* 
        CATEGORY SECTION (banner + carousel)
      */
-    #claras    { --accent: #c9a74e; }
-    #encinos   { --accent: #3a7d5c; }
-    #oscuras   { --accent: #6b4226; }
-    #especiales{ --accent: #4a5a7a; }
+    #claras    { --accent: #D4003A; }
+    #encinos   { --accent: #8A9091; }
+    #oscuras   { --accent: #4a4a4a; }
+    #especiales{ --accent: #B5000A; }
 
     /* Banner (photo background header) */
     .cat-banner {
@@ -257,30 +257,6 @@
     /* 
        CTA BANNER (simple green)
      */
-    .cta-banner {
-      background: linear-gradient(135deg, #1a3d2e 0%, #2d6b4e 100%);
-      padding: 72px 0;
-      text-align: center;
-    }
-    .cta-banner h2 {
-      font-family: var(--font-heading);
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 12px;
-    }
-    .cta-banner h2 span { color: var(--gold-light, #c9a74e); }
-    .cta-banner p {
-      color: rgba(255,255,255,.75);
-      font-size: 1rem;
-      margin-bottom: 32px;
-    }
-    .cta-banner-btns {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
 
     /* 
        MODAL
@@ -405,8 +381,7 @@
   <nav class="navbar scrolled" id="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo">
-        <div class="nav-logo-icon">M</div>
-        <span class="nav-logo-text">MELAMINE</span>
+        <img src="../imagenes/logoMmelamine.jpeg" alt="MM Melamine" class="nav-logo-img">
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Inicio</a></li>
@@ -429,16 +404,16 @@
       <div class="cat-filter-inner">
         <button class="cat-tab active" data-target="all">Todas las colecciones</button>
         <button class="cat-tab" data-target="claras">
-          <span class="tab-dot" style="background:#c9a74e;"></span>Maderas Claras
+          <span class="tab-dot" style="background:#D4003A;"></span>Maderas Claras
         </button>
         <button class="cat-tab" data-target="encinos">
-          <span class="tab-dot" style="background:#3a7d5c;"></span>Encinos &amp; Fresnos
+          <span class="tab-dot" style="background:#8A9091;"></span>Encinos &amp; Fresnos
         </button>
         <button class="cat-tab" data-target="oscuras">
-          <span class="tab-dot" style="background:#6b4226;"></span>Tonos Oscuros
+          <span class="tab-dot" style="background:#4a4a4a;"></span>Tonos Oscuros
         </button>
         <button class="cat-tab" data-target="especiales">
-          <span class="tab-dot" style="background:#4a5a7a;"></span>Texturas Especiales
+          <span class="tab-dot" style="background:#B5000A;"></span>Texturas Especiales
         </button>
       </div>
     </div>
@@ -1001,18 +976,6 @@
 
   </section>
 
-
-  <!-- CTA -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2>¿Listo para tu <span>próximo proyecto?</span></h2>
-      <p>Contáctanos y recibe una cotización personalizada sin costo.</p>
-      <div class="cta-banner-btns">
-        <a href="https://api.whatsapp.com/send?phone=523335590139&text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n%20de%20melamina." class="btn" style="background:#25D366; color:#fff;" target="_blank" rel="noopener"> WhatsApp</a>
-        <a href="contacto.html" class="btn" style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.3); color:#fff;">Ver formulario →</a>
-      </div>
-    </div>
-  </section>
 
 
   <!-- 

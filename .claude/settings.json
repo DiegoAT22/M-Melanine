@@ -5,7 +5,8 @@
       "Bash(py -c \"import sys; sys.stdout.reconfigure\\(encoding=''utf-8''\\); print\\(bytes\\([0xF0, 0x9F, 0x93, 0x8D]\\).decode\\(''utf-8''\\), bytes\\([0xF0, 0x9F, 0x91, 0x8D]\\).decode\\(''utf-8''\\)\\)\")",
       "Bash(py -:*)",
       "Bash(python3:*)",
-      "Bash(py -3 -c \":*)"
+      "Bash(py -3 -c \":*)",
+      "Bash(ls \"c:\\\\Users\\\\diego\\\\OneDrive\\\\Documentos\\\\Uag\\\\melamine2 2\\\\melamine2\\\\html\"\":*)"
     ]
   }
 }
