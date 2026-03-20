@@ -369,9 +369,28 @@
       .cat-filter-inner { justify-content: flex-start; }
       .cat-banner-content { flex-direction: column; align-items: flex-start; }
 
-      .modal-box { grid-template-columns: 1fr; }
-      .modal-swatch { aspect-ratio: 16/9; }
-      .modal-left { border-right: none; border-bottom: 1px solid var(--divider); }
+      /* Modal – single scrollable column on mobile */
+      .modal-overlay { padding: 0; align-items: flex-end; }
+      .modal-box {
+        grid-template-columns: 1fr;
+        max-height: 92vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border-radius: 18px 18px 0 0;
+        width: 100%;
+        max-width: 100%;
+      }
+      .modal-left {
+        border-right: none;
+        border-bottom: 1px solid var(--divider);
+        overflow-y: visible;
+      }
+      .modal-swatch { aspect-ratio: 4/3; }
+      .modal-right {
+        overflow-y: visible;
+        padding: 20px 16px;
+      }
+      .modal-main-wrap { min-height: 200px; }
     }
   </style>
 </head>
