@@ -210,16 +210,18 @@ h6 {
 
 .solutions-slider-wrap {
   position: relative;
+  overflow: hidden;
 }
 
 .solutions-track {
   display: flex;
   gap: 24px;
-  overflow: hidden;
+  overflow: visible;
+  width: max-content;
 }
 
 .solution-card {
-  min-width: calc((100% - 48px)/3);
+  width: 280px;
   flex-shrink: 0;
   border: 1px solid var(--divider);
   border-radius: var(--radius-card);
@@ -339,11 +341,11 @@ h6 {
 }
 
 .slider-nav.prev {
-  left: -20px;
+  left: 8px;
 }
 
 .slider-nav.next {
-  right: -20px;
+  right: 8px;
 }
 
 /* =========================================
@@ -1417,17 +1419,9 @@ h6 {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
 
-/* =========================================
-   FIX: Remove white backgrounds from PNG product images
-   ========================================= */
-.solution-card-img img,
-.brand-product-card-img img {
-  mix-blend-mode: multiply;
-}
-
 .solution-card-img,
 .brand-product-card-img {
-  background: var(--bg-cream);
+  background: var(--bg-cream-mid);
 }
 
 /* Experience cards: increase background image visibility */
