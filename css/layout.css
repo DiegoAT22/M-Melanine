@@ -161,7 +161,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.45) saturate(0.7);
+  filter: brightness(0.65);
 }
 
 .hero-overlay {
@@ -433,6 +433,47 @@
   text-align: center;
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================================
+   FOOTER LOCATIONS GRID
+   ========================================= */
+.footer-locations {
+  width: 100%;
+  margin: 0 0 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-locations-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px 24px;
+  text-align: left;
+}
+
+.footer-location strong {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4px;
+}
+
+.footer-location span {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
 }
 
 /* =========================================

@@ -145,22 +145,36 @@
         </div>
     </section>
 
-    <!-- Mapa -->
-    <div style="width:100%; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider);">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.058!2d-103.462184!3d20.703408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f4f3cedfbfa95%3A0xe89d7e3aca2028d3!2sProlongaci%C3%B3n%20Av.%20Vallarta%201047%2C%20Cd.%20Granja%2C%2045010%20Zapopan%2C%20Jal.!5e0!3m2!1ses!2smx!4v1700000000000"
-            width="100%" height="360" style="display:block; border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" title="Ubicacion Melamine">
-        </iframe>
-        <div
-            style="background:var(--bg-cream-mid); padding:14px 24px; font-size:0.85rem; color:var(--text-muted); text-align:center;">
-            Prolongacion Av. Vallarta #1047 &nbsp;|&nbsp; CP 45019, Zapopan, Jalisco, Mexico
+    <!-- ========== MAP CAROUSEL ========== -->
+    <section class="map-carousel-section" id="ubicaciones">
+        <div class="container">
+            <div class="section-header" style="text-align:center;">
+                <h2 class="section-title" style="color:#fff;">Nuestras <span style="color:var(--green-dark);">Ubicaciones</span></h2>
+                <p class="section-subtitle">Visítanos en cualquiera de nuestras sucursales en la República Mexicana</p>
+            </div>
+
+            <!-- Map Frame -->
+            <div class="map-display">
+                <div class="map-frame">
+                    <iframe id="mapIframe"
+                        src="https://maps.google.com/maps?q=Av.+Circunvalaci%C3%B3n+Agust%C3%ADn+Y%C3%A1%C3%B1ez+1505,+Moderna,+44190+Guadalajara,+Jalisco,+Mexico&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación Melamine"></iframe>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows + Info -->
+            <div class="map-info" id="mapInfo">
+                <div class="map-info-title" id="mapTitle">Matríz Guadalajara</div>
+                <div class="map-info-address" id="mapAddress">Av. Circunvalación Agustín Yáñez 1505, Moderna, 44190 Guadalajara, Jalisco.</div>
+            </div>
+
+            <div class="map-counter"><span id="mapCurrent">1</span> / <span id="mapTotal">10</span></div>
         </div>
-    </div>
+    </section>
 
     <div class="contact-bar">
         <div class="contact-bar-inner">
-            <div class="contact-bar-item"><span></span><a href="tel:3335590139">+52 (333) 559-0139</a></div>
             <div class="contact-bar-item"><span></span><a href="https://api.whatsapp.com/send?phone=523335590139"
                     target="_blank">Escribir en WhatsApp</a></div>
             <div class="contact-bar-item"><span></span><span>Guadalajara, Jalisco</span></div>
@@ -180,6 +194,21 @@
                         href="contacto.html">Contáctanos</a>
                 </nav>
 
+            </div>
+            <div class="footer-locations">
+                <p class="footer-locations-title">Nuestras Sucursales</p>
+                <div class="footer-locations-grid">
+                    <div class="footer-location"><strong>Matríz Guadalajara</strong><span>Av. Circunvalación Agustín Yáñez 1505, Moderna, 44190 Guadalajara, Jalisco.</span></div>
+                    <div class="footer-location"><strong>Sucursal Zapopan</strong><span>Av. de las Américas 568, Loma Blanca, 45167 Zapopan, Jal.</span></div>
+                    <div class="footer-location"><strong>Sucursal Aguascalientes</strong><span>Av. Convención de 1914 pte. #1622, Colonia La Concordia, C.P. 20040, Aguascalientes</span></div>
+                    <div class="footer-location"><strong>Sucursal Puebla</strong><span>Boulevard Hermanos Serdán #639, entre Colima y 15 de Mayo, San Rafael Poniente, CP 72029</span></div>
+                    <div class="footer-location"><strong>Sucursal Querétaro</strong><span>Av. Paseo de Constituyentes #406, Colonia Jardines de la Hacienda</span></div>
+                    <div class="footer-location"><strong>Sucursal Tepic</strong><span>Av. Tecnológico 3730, Miguel Hidalgo, 63193 Tepic, Nayarit</span></div>
+                    <div class="footer-location"><strong>Sucursal Tijuana</strong><span>Calle Ing. Juan Ojeda Robles #23, Buena Vista, Mineral de Santa Fe, 22416 Tijuana, B.C.</span></div>
+                    <div class="footer-location"><strong>Sucursal Mazatlán</strong><span>Av. Gutiérrez Nájera #909, Montuosa, C.P. 82030 Mazatlán, Sin.</span></div>
+                    <div class="footer-location"><strong>Sucursal Morelia</strong><span>Perif. Paseo de la República #5731, Colonia Lago 1, C.P. 58115 Morelia, Michoacán</span></div>
+                    <div class="footer-location"><strong>Estado de México</strong><span>Calzada San Esteban #105, Col. Ampliación San Esteban. Naucalpan de Juárez, CP 53550 · WhatsApp: 55 3030 1028</span></div>
+                </div>
             </div>
             <div class="footer-bottom">&copy; 2026 Melamine. Todos los derechos reservados.</div>
         </div>
@@ -216,6 +245,84 @@
             entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
         }, { threshold: 0.12 });
         document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        /* ── Map Carousel ── */
+        (function () {
+            const locations = [
+                {
+                    name: 'Matríz Guadalajara',
+                    address: 'Av. Circunvalación Agustín Yáñez 1505, Moderna, 44190 Guadalajara, Jalisco.',
+                    src: 'https://maps.google.com/maps?q=Av.+Circunvalaci%C3%B3n+Agust%C3%ADn+Y%C3%A1%C3%B1ez+1505,+Moderna,+44190+Guadalajara,+Jalisco,+Mexico&t=&z=16&ie=UTF8&iwloc=&output=embed'
+                },
+                {
+                    name: 'Sucursal Zapopan',
+                    address: 'Av. de las Américas 568, Loma Blanca, 45167 Zapopan, Jal.',
+                    src: 'https://maps.google.com/maps?q=Av.+de+las+Am%C3%A9ricas+568,+Loma+Blanca,+45167+Zapopan,+Jalisco,+Mexico&t=&z=16&ie=UTF8&iwloc=&output=embed'
+                },
+                {
+                    name: 'Sucursal Aguascalientes',
+                    address: 'Av. Convención de 1914 pte. #1622, Colonia La Concordia, C.P. 20040, Aguascalientes',
+                    src: 'https://maps.google.com/maps?q=Av.+Convenci%C3%B3n+de+1914+pte+1622,+La+Concordia,+20040+Aguascalientes,+Mexico&t=&z=16&ie=UTF8&iwloc=&output=embed'
+                },
+                {
+                    name: 'Sucursal Puebla',
+                    address: 'Boulevard Hermanos Serdán #639, entre Colima y 15 de Mayo, San Rafael Poniente, CP 72029',
+                    src: 'https://maps.google.com/maps?q=Boulevard+Hermanos+Serdan+639,+San+Rafael+Poniente,+72029+Puebla,+Mexico&t=&z=16&ie=UTF8&iwloc=&output=embed'
+                },
+                {
+                    name: 'Sucursal Querétaro',
+                    address: 'Av. Paseo de Constituyentes #406, Colonia Jardines de la Hacienda',
+                    src: 'https://maps.google.com/maps?q=Av.+Paseo+de+Constituyentes+406,+Jardines+de+la+Hacienda,+Quer%C3%A9taro,+Mexico&t=&z=16&ie=UTF8&iwloc=&output=embed'
+                },
+                {
+                    name: 'Sucursal Tepic',
+                    address: 'Av. Tecnológico 3730, Miguel Hidalgo, 63193 Tepic, Nayarit',
+                    src: 'https://maps.google.com/maps?q=Av.+Tecnol%C3%B3gico+3730,+Miguel+Hidalgo,+63193+Tepic,+Nayarit,+Mexico&t=&z=16&ie=UTF8&iwloc=&output=embed'
+                },
+                {
+                    name: 'Sucursal Tijuana',
+                    address: 'Calle Ing. Juan Ojeda Robles #23, Buena Vista, Mineral de Santa Fe, 22416 Tijuana, B.C.',
+                    src: 'https://maps.google.com/maps?q=Calle+Ing.+Juan+Ojeda+Robles+23,+Buena+Vista,+22416+Tijuana,+BC,+Mexico&t=&z=16&ie=UTF8&iwloc=&output=embed'
+                },
+                {
+                    name: 'Sucursal Mazatlán',
+                    address: 'Av. Gutiérrez Nájera #909, Montuosa, C.P. 82030 Mazatlán, Sin.',
+                    src: 'https://maps.google.com/maps?q=Av+Guti%C3%A9rrez+N%C3%A1jera+909,+Montuosa,+82030+Mazatl%C3%A1n,+Sinaloa,+Mexico&t=&z=16&ie=UTF8&iwloc=&output=embed'
+                },
+                {
+                    name: 'Sucursal Morelia',
+                    address: 'Perif. Paseo de la República #5731, Colonia Lago 1, C.P. 58115 Morelia, Michoacán',
+                    src: 'https://maps.google.com/maps?q=Perif%C3%A9rico+Paseo+de+la+Rep%C3%BAblica+5731,+Lago+1,+58115+Morelia,+Michoac%C3%A1n,+Mexico&t=&z=16&ie=UTF8&iwloc=&output=embed'
+                },
+                {
+                    name: 'Estado de México',
+                    address: 'Calzada San Esteban #105, Col. Ampliación San Esteban. Naucalpan de Juárez, CP 53550 · WhatsApp: 55 3030 1028',
+                    src: 'https://maps.google.com/maps?q=Calzada+San+Esteban+105,+Ampliaci%C3%B3n+San+Esteban,+Naucalpan+de+Ju%C3%A1rez,+53550+Estado+de+M%C3%A9xico,+Mexico&t=&z=16&ie=UTF8&iwloc=&output=embed'
+                }
+            ];
+
+            let current = 0;
+            let autoTimer;
+            const iframe = document.getElementById('mapIframe');
+            const titleEl = document.getElementById('mapTitle');
+            const addressEl = document.getElementById('mapAddress');
+            const counterEl = document.getElementById('mapCurrent');
+
+            function goTo(index) {
+                current = (index + locations.length) % locations.length;
+                const loc = locations[current];
+
+                iframe.classList.add('loading');
+                iframe.src = loc.src;
+                iframe.onload = () => iframe.classList.remove('loading');
+
+                titleEl.textContent = loc.name;
+                addressEl.textContent = loc.address;
+                counterEl.textContent = current + 1;
+            }
+
+            setInterval(() => goTo(current + 1), 6000);
+        })();
     </script>
 </body>
 

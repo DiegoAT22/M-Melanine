@@ -1432,3 +1432,150 @@ h6 {
 .exp-card:hover .exp-card-img {
   opacity: 0.62 !important;
 }
+
+/* =========================================
+   MAP CAROUSEL – Contact page
+   ========================================= */
+.map-carousel-section {
+  background: linear-gradient(165deg, #1a1a1a 0%, #2a2a2a 100%);
+  padding: 72px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-carousel-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(212, 0, 58, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.map-carousel-section .section-header {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.map-carousel-section .section-title {
+  color: #fff;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.map-carousel-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 8px auto 0;
+}
+
+/* ── Map Display ── */
+.map-display {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.map-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  aspect-ratio: 16 / 7;
+  background: #2a2a2a;
+}
+
+.map-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.map-frame iframe.loading {
+  opacity: 0.3;
+}
+
+/* ── Info Card ── */
+.map-info {
+  text-align: center;
+  margin-top: 32px;
+  padding: 32px 40px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.4s ease;
+}
+
+.map-info-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.map-info-title::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  box-shadow: 0 0 10px rgba(212, 0, 58, 0.5);
+}
+
+.map-info-address {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+}
+
+/* ── Counter ── */
+.map-counter {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .map-carousel-section {
+    padding: 48px 0 56px;
+  }
+
+  .map-tabs {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .map-frame {
+    border-radius: 12px;
+    aspect-ratio: 4 / 3;
+  }
+
+  .map-tab {
+    padding: 8px 16px;
+    font-size: 0.72rem;
+  }
+
+  .map-info {
+    padding: 16px 20px;
+  }
+}
