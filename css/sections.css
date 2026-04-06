@@ -48,14 +48,14 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 body {
   font-family: var(--font-body);
   background: var(--bg-cream);
   color: var(--text-body);
-  line-height: 1.7;
+  line-height: 1.8;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -184,9 +184,9 @@ h6 {
 }
 
 .exp-card-footer p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-body);
-  line-height: 1.65;
+  line-height: 1.75;
 }
 
 .experience-section-cta {
@@ -307,13 +307,13 @@ h6 {
 
 .solution-card-body strong {
   display: block;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--text-dark);
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .solution-card-body span {
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   color: var(--text-muted);
 }
 
@@ -476,7 +476,7 @@ h6 {
 .certs-image-col {
   position: relative;
   overflow: hidden;
-  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+  background: var(--bg-cream-mid);
 }
 
 .certs-image-col img {
@@ -532,13 +532,13 @@ h6 {
 
 .cert-block strong {
   display: block;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--text-dark);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .cert-block span {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
 }
 
@@ -1578,4 +1578,116 @@ h6 {
   .map-info {
     padding: 16px 20px;
   }
+}
+
+/* =========================================
+   FRANJA ROJA / PROMO BAR
+   ========================================= */
+.promo-bar {
+  background: #C1001A;
+  color: #fff;
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  position: relative;
+  z-index: 999;
+}
+
+.promo-bar a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.promo-bar a:hover {
+  opacity: 0.8;
+}
+
+.promo-sep {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================================
+   CONÓCENOS – PILLARS ROW
+   ========================================= */
+.conocenos-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  margin: 40px 0 0;
+}
+
+.conocenos-pillar {
+  padding: 28px 32px;
+  border-right: 1px solid var(--divider);
+  background: var(--bg-white);
+  transition: var(--transition);
+}
+
+.conocenos-pillar:last-child {
+  border-right: none;
+}
+
+.conocenos-pillar:hover {
+  background: var(--bg-cream);
+}
+
+.conocenos-pillar strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--green-dark);
+  margin-bottom: 4px;
+}
+
+.conocenos-pillar span {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .conocenos-pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .conocenos-pillar {
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .promo-bar {
+    font-size: 0.75rem;
+    gap: 10px;
+  }
+}
+
+/* =========================================
+   BENEFICIOS – FRASE
+   ========================================= */
+.beneficios-frase {
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(1.3rem, 3vw, 2.2rem);
+  line-height: 1.4;
+  margin-top: 24px;
+  color: var(--text-dark);
+  letter-spacing: 2px;
+}
+
+.frase-sep {
+  display: inline-block;
+  margin: 0 14px;
+  opacity: 0.3;
+  color: var(--text-muted);
 }
